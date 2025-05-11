@@ -1,13 +1,16 @@
-import brevo from "@getbrevo/brevo";
+import {
+  TransactionalEmailsApi,
+  SendSmtpEmail,
+  TransactionalEmailsApiApiKeys,
+} from "@getbrevo/brevo";
 
-const apiInstance = new brevo.TransactionalEmailsApi();
-
+const apiInstance = new TransactionalEmailsApi();
 const apiKey = process.env.BREVO_API_KEY;
 if (!apiKey) {
   throw new Error("BREVO_API_KEY no está definida en las variables de entorno");
 }
 
-apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, apiKey);
+apiInstance.setApiKey(TransactionalEmailsApiApiKeys.apiKey, apiKey);
 
 interface Params {
   htmlContent: string;
@@ -16,7 +19,7 @@ interface Params {
 
 export async function sendEmail({ htmlContent, sender }: Params) {
   try {
-    const smtpEmail = new brevo.SendSmtpEmail();
+    const smtpEmail = new SendSmtpEmail();
     smtpEmail.subject = "Nuevo mensaje de contacto desde tu portafolio";
     smtpEmail.to = [{ email: "lucas1617y@gmail.com", name: "Lucas" }];
 

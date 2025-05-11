@@ -8,7 +8,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Lucas",
+  title: "Portafolio de Lucas",
   description:
     "Portafolio de Lucas, un desarrollador web especializado en Next.js y Tailwind CSS.",
 };

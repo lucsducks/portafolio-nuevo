@@ -2,9 +2,9 @@
 
 import { sendEmail } from "@/lib/sendEmail";
 import { z } from "zod";
-import { NotificationTypes } from "../../../../../../enums/notification-type.enum";
 import { DataFormFields } from "../interfaces/data-form-fields.interface";
-import FormState from "../../../../../../interfaces/form-state.interface";
+import FormState from "@/interfaces/form-state.interface";
+import { NotificationTypes } from "@/enums/notification-type.enum";
 
 const schemaSendEmail = z.object({
   name: z.string().min(1, "Este campo es obligatorio"),

@@ -2,6 +2,7 @@
 
 import React, { useTransition, useState } from "react";
 import { sendEmailAction } from "./actions/send-mail.action";
+import { NotificationTypes } from "@/enums/notification-type.enum";
 
 const ContactForm: React.FC = () => {
   const [form, setForm] = useState({
@@ -33,7 +34,7 @@ const ContactForm: React.FC = () => {
         {
           message: null,
           errors: null,
-          resultType: undefined,
+          resultType: NotificationTypes.INFO,
           fieldsData: form,
         },
         formData
