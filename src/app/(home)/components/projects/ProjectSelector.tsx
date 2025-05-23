@@ -8,6 +8,8 @@ interface FeatureItem {
   description: string;
   icon?: string;
   color: string;
+  link?: string;
+  buttonText?: string;
 }
 
 interface FeatureSelectorProps {
@@ -92,6 +94,16 @@ const FeatureSelector: FC<FeatureSelectorProps> = ({
     }, 1000);
   };
 
+  const handleButtonClick = (link: string) => {
+    if (link) {
+      if (link.startsWith("http://") || link.startsWith("https://")) {
+        window.open(link, "_blank", "noopener,noreferrer");
+      } else {
+        window.location.href = link;
+      }
+    }
+  };
+
   const getActiveItem = () => {
     return items.find((item) => item.id === activeItem);
   };
@@ -147,6 +159,14 @@ const FeatureSelector: FC<FeatureSelectorProps> = ({
             <p className={styles.featureDescription}>
               {getActiveItem()?.description}
             </p>
+            {getActiveItem()?.link && (
+              <button
+                className={styles.featureButton}
+                onClick={() => handleButtonClick(getActiveItem()?.link || "")}
+              >
+                {getActiveItem()?.buttonText || "Ver más"}
+              </button>
+            )}
           </div>
         )}
       </div>

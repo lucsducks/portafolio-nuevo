@@ -31,10 +31,10 @@
 
 @layer base {
   :root {
-    --background-hsl: 220 15% 10%; /* gris oscuro azulado */
-    --foreground-hsl: 0 0% 100%; /* blanco */
-    --primary-hsl: 200 100% 60%; /* celeste-azulado */
-    --primary-foreground-hsl: 0 0% 0%; /* texto oscuro sobre fondo celeste */
+    --background-hsl: 220 15% 10%;
+    --foreground-hsl: 0 0% 100%;
+    --primary-hsl: 200 100% 60%;
+    --primary-foreground-hsl: 0 0% 0%;
     --border-hsl: 220 10% 25%;
     --input-hsl: 220 10% 20%;
     --ring-hsl: 200 100% 60%;
