@@ -196,11 +196,11 @@ export const Hero: React.FC = () => {
 
               <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <Link
-                  href="#contact"
-                  className="font-medium flex items-center gap-1 group"
+                  href="/projects"
+                  className="font-large flex items-center gap-1 group"
                 >
                   <AdaptiveText
-                    text="Contáctame"
+                    text="Proyectos"
                     defaultColor="text-primary"
                     colorOnPrimary="text-white"
                     diagonalPosition={diagonalPosition}

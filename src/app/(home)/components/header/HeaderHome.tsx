@@ -50,7 +50,7 @@ export const HeaderHome = () => {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="flex gap-6">
             <MenuItem title={"Inicio"} path={"#hero"} />
-            <MenuItem title={"Proyectos"} path={"#project"} />
+            <MenuItem title={"Proyectos"} path={"/projects"} />
             <MenuItem title={"Logros"} path={"#achievements"} />
 
             <MenuItem title={"Contáctame"} path={"#contact"} />
@@ -72,7 +72,7 @@ export const HeaderHome = () => {
               <div className="flex flex-col space-y-3 text-foreground">
                 <Logo className="h-6 fill-primary mb-" />
                 <MenuSheet title="Inicio" path={"#hero"} />
-                <MenuSheet title="Proyectos" path={"#project"} />
+                <MenuSheet title="Proyectos" path={"/projects"} />
                 <MenuSheet title="Logros" path={"#achievements"} />
                 <MenuSheet title="Contáctame" path={"#contact"} />
               </div>
