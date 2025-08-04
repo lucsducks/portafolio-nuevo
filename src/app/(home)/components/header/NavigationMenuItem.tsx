@@ -11,15 +11,17 @@ interface Props {
 
 export const MenuItem = ({ title, path }: Props) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const targetId = path.replace("#", "");
-    const element = document.getElementById(targetId);
+    if (path.startsWith("#")) {
+      e.preventDefault();
+      const targetId = path.replace("#", "");
+      const element = document.getElementById(targetId);
 
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: "smooth",
-      });
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
